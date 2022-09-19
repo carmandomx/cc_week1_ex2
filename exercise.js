@@ -16,15 +16,23 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
+    //Declaration of variables:
     var origin = str.split('');
     const pal = [];
     var revindex = 0;
+    
+    //Line of code to erase blank spaces
     origin = origin.filter(e => String(e).trim());
+
+    /*Process to copy backwards the original string no a new string for 
+    a future comparation*/
     for (let index = origin.length-1;  index >= 0; index--){
         pal[revindex] = origin[index];
         revindex++;   
         
     }
+
+    //Final process to check if the string is a palindrome to return the answer
     if(pal.join('') === origin.join('')){
         return true;
     }else{
