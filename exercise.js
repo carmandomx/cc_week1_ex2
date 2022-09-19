@@ -16,14 +16,16 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    return str
+        .replace(' ', '') // remove spaces
+        .split('') // transform str to an array
+        .every(
+            (l, i, arr) =>
+                l === str.replace(' ', '').split('')[arr.length - 1 - i] // check if all letters are the same in reverse
+        );
+
     /* Only make changes below this comment */
-}
-
-
-
-
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
