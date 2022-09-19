@@ -16,8 +16,20 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    var origin = str.split('');
+    const pal = [];
+    var revindex = 0;
+    origin = origin.filter(e => String(e).trim());
+    for (let index = origin.length-1;  index >= 0; index--){
+        pal[revindex] = origin[index];
+        revindex++;   
+        
+    }
+    if(pal.join('') === origin.join('')){
+        return true;
+    }else{
+        return false;
+    }
     /* Only make changes below this comment */
 }
 
