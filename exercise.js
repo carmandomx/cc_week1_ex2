@@ -16,9 +16,28 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    var splitted = str.split("");
+    let reversed = splitted.reverse().join("").toString();
+    let solution = reversed ;
+    const len = reversed.length;  
+    for (let i = 0; i < len; i++) {  
+        if(reversed[i]==" "){
+            console.log(i);
+            let temp = solution[i];
+            solution=setCharAt(solution,i,solution[i+1]);
+            solution=setCharAt(solution,(i+1),temp);
+        }
+    } 
+    if(str==solution){
+        return true;
+    }else{
+        return false;
+    }
     /* Only make changes below this comment */
+}
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
 }
 
 
