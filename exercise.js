@@ -16,7 +16,19 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
+    let cadena = str.replace(/ /gi,"").toLowerCase();
+
+    let original = Array.from(cadena);
+
+    let inverted = [...original];
+
+    inverted.reverse();
+
+    if(original.toString() == inverted.toString()){
+        return true;
+    } else{
+        return false;
+    } 
     
     /* Only make changes below this comment */
 }
