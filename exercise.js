@@ -15,15 +15,32 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
-}
+  /* Only make changes below this comment */
+  str = str.toLowerCase();
+  let stringBack = str.replace(/ /g, "").split("").reverse().join("");
+  stringNoE = str.replace(/ /g, "");
+  console.log(stringBack);
 
-
-
-
+  if (!str) {
+    return console.warn("Only string characters");
+  } else if (typeof str !== "string") {
+    return console.warn("Only string values");
+  } else if (str.lenght === 1) {
+    return false;
+  } else {
+    return stringNoE === stringBack //true
+      ? true
+      : false;
+  }
+  /* Only make changes below this comment */
+};
+console.log(palindrome("Anita Lava la Tina"));
+console.log(palindrome("a"));
+console.log(palindrome("race a car"));
+console.log(palindrome("madam"));
+console.log(palindrome("taco cat"));
+console.log(palindrome("noon"));
+console.log(palindrome("almost a palindrome"));
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
