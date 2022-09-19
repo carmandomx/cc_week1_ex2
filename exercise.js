@@ -16,8 +16,13 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    let original = str.split(" ").join(""); //Here we remove the spaces if there is any
+    let split = original.split('');//Here we create an array out of the string
+    let reversed = split.reverse().join("");//In this line we reverse the previous array and joint it 
+    if(reversed === original){ //Here we only compare if the reversed one is the same as the original and output a result
+        return true;
+    }else 
+        return false;
     /* Only make changes below this comment */
 }
 
