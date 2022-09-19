@@ -17,12 +17,13 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     var splitted = str.split("");
+    // Array to string
     let reversed = splitted.reverse().join("").toString();
     let solution = reversed ;
     const len = reversed.length;  
+    // Searching where a space is in order to change it with the next char
     for (let i = 0; i < len; i++) {  
         if(reversed[i]==" "){
-            console.log(i);
             let temp = solution[i];
             solution=setCharAt(solution,i,solution[i+1]);
             solution=setCharAt(solution,(i+1),temp);
@@ -35,6 +36,7 @@ const palindrome = (str) => {
     }
     /* Only make changes below this comment */
 }
+// It's a function that acts like a ReplaceAt
 function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
