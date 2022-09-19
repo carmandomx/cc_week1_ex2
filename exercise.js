@@ -15,15 +15,18 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
-}
+  /* Only make changes below this comment */
 
+  //Create a variable for convert all into lowercase and remoce spaces from the input
+  const normalizedString = str.replace(/\W+/g, "").toLowerCase();
 
+  //Create a second variable for reverse the normalized string
+  const reversedString = normalizedString.split("").reverse().join("");
 
-
+  //Compare the two variables and if there are equal return true
+  return normalizedString === reversedString ? true : false;
+  /* Only make changes below this comment */
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
