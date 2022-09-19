@@ -17,6 +17,26 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     
+    //Split by spaces and after join the array to obtain a constant with just one word
+    const words = str.split(' ').join('');
+    //This help me to show in the console the word I obtained.
+    console.log(words);
+    //Variable to have the word's length 
+    let len = words.length-1;
+
+    //Cycle to verify the word with and inverse sense
+    //Thats mean the first letter with the last, after the second with the second last...
+    //word[0] == word[len-0] ... word[0] == word[len-1] ... word[i] == word[len-i]
+
+    for(let i = 0;i<len;i++){
+
+        if(words[i] != words[len-i]){
+            //if not, it's not a palindrome
+            return false;
+        }
+    }
+    //It is a palindorme
+    return true;
     
     /* Only make changes below this comment */
 }
