@@ -17,25 +17,31 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     //Declaration of variables:
-    var origin = str.split('');
+    //Spliting the received string for further solutions
+    let origin = str.split('');
+    
+    //Inicialization of the variable that will contain the reverse string
     const pal = [];
-    var revindex = 0;
+
+    //Index to travel the pal value, as the index for the origin is going backwards
+    let revindex = 0;
     
     //Line of code to erase blank spaces
     origin = origin.filter(e => String(e).trim());
 
-    /*Process to copy backwards the original string no a new string for 
+    /*Process to copy backwards the original string to a new string for 
     a future comparation*/
     for (let index = origin.length-1;  index >= 0; index--){
         pal[revindex] = origin[index];
         revindex++;   
-        
     }
 
     //Final process to check if the string is a palindrome to return the answer
     if(pal.join('') === origin.join('')){
+        console.log("It's a palindrome");
         return true;
     }else{
+        console.log("It's not a palindrome");
         return false;
     }
     /* Only make changes below this comment */
