@@ -14,16 +14,33 @@
 */
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
-const palindrome = (str) => {
+const palindrome = (str) =>
+ {
     /* Only make changes below this comment */
-    
-    
+
+    /* the method replace() is to return the new string with some*/
+    /* or all matches of a pattern with a replacement*/
+
+    let word = str.replace(/ /g,"").toLowerCase();
+
+    /*Save the inputs in a variables to compare them*/
+
+    let original = Array.from(word);
+
+    let inverted = [...original];
+
+    /*create a function to invert the input "word"*/
+
+    inverted.reverse();
+
+    if(original.toString() === inverted.toString()){
+        return true;
+    } else{
+        return false;
+    } 
+
     /* Only make changes below this comment */
 }
-
-
-
-
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
