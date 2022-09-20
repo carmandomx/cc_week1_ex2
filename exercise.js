@@ -21,7 +21,7 @@ const palindrome = (str) => {
     let origin = str.split('');
     
     //Inicialization of the variable that will contain the reverse string
-    const pal = [];
+    let pal = [];
 
     //Index to travel the pal value, as the index for the origin is going backwards
     let revindex = 0;
