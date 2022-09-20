@@ -16,14 +16,20 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    let cadena = str.replace(/ /gi,"").toLowerCase();
 
-    let original = Array.from(cadena);
+    //Replacing the spaces for nothing, and converting to lowercase to avoid that problem 
+    let compactString = str.replace(/ /gi,"").toLowerCase();
 
+    //Converting compactString into an array
+    let original = Array.from(compactString);
+ 
+    //creating a copy
     let inverted = [...original];
 
+    //Creating an reversed/inverted array from original
     inverted.reverse();
 
+    //Checking the result and creating the returns
     if(original.toString() == inverted.toString()){
         return true;
     } else{
