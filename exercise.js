@@ -15,13 +15,25 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
+
+  
+    /* Only make changes below this comment */  
+
+    var word = str.split("").reverse().join("");
+    if(word === str)
+    { 
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+       
     
     /* Only make changes below this comment */
 }
 
-
+palindrome("racecar");
 
 
 
