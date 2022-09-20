@@ -14,12 +14,17 @@
 */
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
-const palindrome = (str) => {
+
     /* Only make changes below this comment */
-    
-    
+    function palindrome(str) {
+        let String = str.replace(/\W+|/g, "");
+        let reverseString = String.split("").reverse().join("");
+        return (String === reverseString) ? true : false;
+      }
+      
+      let result = palindrome("A man***, a p__lan, a canal. Panama");
     /* Only make changes below this comment */
-}
+
 
 
 
