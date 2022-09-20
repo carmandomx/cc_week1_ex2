@@ -17,9 +17,9 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
 
-    const words = str.split(' ').join('')
-    for (let i = 0; i <words.length-1; i++) {
-        if (words[i] != words[words.length-1-i])
+    const words = str.split(' ').join('')//first we start by using the split and join methods, split erases all the spaces and join puts together all it sees without spaces 
+    for (let i = 0; i <words.length-1; i++) { //so we can have an array with just letters. then we started a for cycle and we made  the comparisson between the first and last
+        if (words[i] != words[words.length-1-i]) //letter of every word 
         return false;
       }
     /* Only make changes below this comment */
