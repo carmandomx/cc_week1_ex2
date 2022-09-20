@@ -16,7 +16,7 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
+    let
     
     /* Only make changes below this comment */
 }
