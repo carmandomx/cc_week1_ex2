@@ -16,8 +16,18 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    // Create a variable to storage the string that users gives you so that you can modify it later, also use a method to avoid capitalize and other that remove empty spaces so this can't affect your result.
+    const newStr = str.replace(/ /g, "").toLowerCase();
+    // Then I duplicate the variable above in order to modify it without modifying the original so that we can compare them at the end.
+    let opposite = newStr;
+    // As it is an string, we need to change this using the method split, so we have an iterable now, there is a method called reverse that works over arrays, once we have the reverse, it still being an array, so we need to take it back to an string with the method join
+    opposite = opposite.split("").reverse().join("");
+    // I used a conditional if to compare the str with the opposite, if true, then it returns true, if not, then it returns false.
+    // I used the ternary operator to make the conditional in order to make the code as small as possible
+    let isEqual = newStr === opposite ? true : false
+    // Then we need to return the comparison result
+    return isEqual;
+
     /* Only make changes below this comment */
 }
 
