@@ -16,9 +16,14 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+
+    const words = str.split(' ').join('')
+    for (let i = 0; i <words.length-1; i++) {
+        if (words[i] != words[words.length-1-i])
+        return false;
+      }
     /* Only make changes below this comment */
+    return true;
 }
 
 
