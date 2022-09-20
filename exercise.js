@@ -16,12 +16,43 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
+    //Declaration of variables:
+    //Spliting the received string and declaring the array that will contain the filtered string
+    let origin = str.split('');
+    let filtered = [];
     
+    //Inicialization of the variable that will contain the reverse string
+    let pal = [];
+
+    //Index to travel the pal value, as the index for the origin is going backwards
+    let revindex = 0;
     
+    //Code to erase blank spaces
+    let filt = 0;
+    for(let indexo = 0; indexo < origin.length; indexo++){
+        if(origin[indexo] !== " "){
+            filtered[filt] = origin[indexo];
+            filt++;
+        }
+    }
+    origin = filtered;
+    /*Process to copy backwards the original string to a new string for 
+    a future comparation*/
+    for (let index = origin.length-1;  index >= 0; index--){
+        pal[revindex] = origin[index];
+        revindex++;   
+    }
+
+    //Final process to check if the string is a palindrome to return the answer
+    if(pal.join('') === origin.join('')){
+        console.log("It's a palindrome");
+        return true;
+    }else{
+        console.log("It's not a palindrome");
+        return false;
+    }
     /* Only make changes below this comment */
 }
-
-
 
 
 
