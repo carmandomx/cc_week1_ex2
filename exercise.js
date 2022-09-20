@@ -17,8 +17,9 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     //Declaration of variables:
-    //Spliting the received string for further solutions
+    //Spliting the received string and declaring the array that will contain the filtered string
     let origin = str.split('');
+    let filtered = [];
     
     //Inicialization of the variable that will contain the reverse string
     let pal = [];
@@ -26,9 +27,15 @@ const palindrome = (str) => {
     //Index to travel the pal value, as the index for the origin is going backwards
     let revindex = 0;
     
-    //Line of code to erase blank spaces
-    origin = origin.filter(e => String(e).trim());
-
+    //Code to erase blank spaces
+    let filt = 0;
+    for(let indexo = 0; indexo < origin.length; indexo++){
+        if(origin[indexo] !== " "){
+            filtered[filt] = origin[indexo];
+            filt++;
+        }
+    }
+    origin = filtered;
     /*Process to copy backwards the original string to a new string for 
     a future comparation*/
     for (let index = origin.length-1;  index >= 0; index--){
@@ -46,8 +53,6 @@ const palindrome = (str) => {
     }
     /* Only make changes below this comment */
 }
-
-
 
 
 
