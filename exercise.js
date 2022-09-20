@@ -17,7 +17,31 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     
+    /* First remove the blank spaces with ".replace(/ /g,'')" 
+    and then obtain an array with the characters from the str with .split('')
+    saving the result in a variable called "array" */
+    const array = str.replace(/ /g,'').split('');
+    console.log(array);
     
+    // Array without spaces to string
+    const string1 = array.join('');
+
+    /* With "array.reverse()" returns the array in reverse order
+    and save it in "reverseArray" variable */
+    const reverseArray = array.reverse();
+    console.log(reverseArray);
+
+    // Reverse array without spaces to string
+    const string2 = reverseArray.join('');
+    
+    /* If the strings are the same then is it a Palindrome */
+    if (string1 == string2) {
+        return true;
+    }
+    else{
+        return false;
+    }
+
     /* Only make changes below this comment */
 }
 
