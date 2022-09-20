@@ -16,10 +16,19 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    let original = str.split(" ").join(""); //Here we remove the spaces if there is any
-    let split = original.split('');//Here we create an array out of the string
-    let reversed = split.reverse().join("");//In this line we reverse the previous array and joint it 
-    if(reversed === original){ //Here we only compare if the reversed one is the same as the original and output a result
+    let original2 = [];
+    let original = str.split(""); 
+    for(let i=0;i<original.length;i++){ //In this cycle we get rid of the spaces in the string if there is any 
+        if(original[i]!== " "){
+            original2+=original[i];
+        }
+    }
+    let reversed = "";
+    for(let i=original2.length-1;i>=0;i--){ //Here we reverse the string by doing a count down instead of a count up to and saving the value 
+        reversed += original2[i];
+    }
+
+    if(reversed === original2){ //Here we just make sure that the reverse is equal to the original and return the answer
         return true;
     }else 
         return false;
