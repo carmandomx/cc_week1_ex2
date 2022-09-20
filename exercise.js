@@ -15,15 +15,25 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
-}
+  /* Only make changes below this comment */
 
+  /* replace method to remove whitespaces. /s is regex for whitespaces and /g is for global */
+  str = str.replace(/\s+/g, '');
+  /* split method to get an array with all the characters */
+  const strLetters = str.split('');
+  /* for loop to search if any character doesn't match */
+  for (let i = 0; i < strLetters.length / 2; i++) {
+    /* if condition that actually checks if the current character matches with its opposite one */
+    if (strLetters[i] !== strLetters[strLetters.length - 1 - i]) {
+      /* return false if some character doesn't match */
+      return false;
+    }
+  }
+  /* return true if all characters did match */
+  return true;
 
-
-
+  /* Only make changes below this comment */
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
