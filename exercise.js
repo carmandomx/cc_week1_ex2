@@ -16,8 +16,21 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+
+    const charsArray = str.split("").filter(item => item.trim() !== ""); // split each character but remove white spaces
+    const regularStr = charsArray.join(""); // join the spaceless array back into a string
+
+    const reverseArray = charsArray.reverse(); // Reversing the previous spaceless array
+    const reverseStr = reverseArray.join(""); // Putting the reverse array back into a string
+    let answer; // declaring variable to store the answer
+    if (regularStr == reverseStr) {
+        // if both strings match (regular and reverse), it's a palindrome
+        answer = true;
+    } else {
+        // if strings don't match, it's not a palindrome
+        answer = false;
+    }
+    return answer;
     /* Only make changes below this comment */
 }
 
