@@ -16,7 +16,21 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
+
+    str = str.replaceAll(" ","");               // Delete all spaces on the string.
+    const arrStr = str.split('');               // Create a new array, array for string, where the elements are the characters of the string.
+    const arrReversed = arrStr.reverse();       // Create a new array from the array for string where the elements are reversed.
+    const strReversed = arrReversed.join('');   // Create a string whit the reversed characters.
     
+    // Control flow with strict equality to determine if both strins are equal. 
+    // If both are equal, return yes and the word is a palindrome.
+    // If both are not equal, return false and the word is not palindrome. 
+    if (str === strReversed) {
+        return true;
+    }
+    else {
+        return false;
+    }
     
     /* Only make changes below this comment */
 }
