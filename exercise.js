@@ -35,7 +35,7 @@ const palindrome = (str) => {
     const string2 = reverseArray.join('');
     
     /* If the strings are the same then is it a Palindrome */
-    if (string1 == string2) {
+    if (string1 === string2) {
         return true;
     }
     else{
