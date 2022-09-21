@@ -17,7 +17,14 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
     
-    
+    noSpaces = str.replaceAll(" ", "").toLowerCase();  //20. Replace all spaces with blanks "" and convert the string to Lower Case
+    backwardsArr = [];                                 //21.Create an array where we will store the reversed string characters
+    for (let i = noSpaces.length - 1; i >= 0; i--) {   //22. Make a Decreasing For Loop with the length of the String with no spaces
+      backwardsArr.push(noSpaces[i]);                  //23. Push the reversed characters into the new Array
+    }
+                                                       
+    const backwardsStr = backwardsArr.join("");        //26. Declare a variable where we will join the reverse characters into a string 
+    return backwardsStr === noSpaces;                  //27. Compare the Reversed String with the original No Space String
     /* Only make changes below this comment */
 }
 
