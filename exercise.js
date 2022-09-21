@@ -16,10 +16,18 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
+    var re = /[\W_]/g;
     
+    var lowRegStr = str.toLowerCase().replace(re, '');    
+    var reverseStr = lowRegStr.split('').reverse().join(''); 
+    if( reverseStr === lowRegStr){return true;}
+    else {return false;} 
     
     /* Only make changes below this comment */
 }
+
+
+
 
 
 
