@@ -15,13 +15,16 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
+ 
+    const reverseString = str.split('').reverse().join(''); /* convert the string into an array, split it into individual characters and then reverse em before joining them into a new array*/
+
+    if(str == reverseString) { /*checking whether the two string match, if they do its a palindrome if they dont it isnt*/
+      console.log('It is a palindrome');
+  }
+    else {
+      console.log('It is not a palindrome');
+  }
 }
-
-
 
 
 
