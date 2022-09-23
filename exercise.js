@@ -15,20 +15,20 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
+ /* Only make changes below this comment */
+    //We delete spaces and store in a new variable
+    let wordNS = str.replace(" ","");
 
-  
-    /* Only make changes below this comment */  
+    //We rewrite the word without spaces backwards and we store in a new variable
+    wordR = wordNS.split("").reverse().join("");
 
-    var word = str.split("").reverse().join("");
-    if(word === str)
-    { 
+    //We compate the word without spaces and the inverted word, then we return true or false
+    if(wordR === wordNS){
+       
         return true;
-    }
-    else
-    {
+    } else{
         return false;
     }
-       
     
     /* Only make changes below this comment */
 }
