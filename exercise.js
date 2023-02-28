@@ -16,8 +16,17 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    let strarr = str.split(" ").join("");
+    let strarr2 = [];
+    for(i=strarr.length-1; i>=0;i--){
+        strarr2.push(strarr[i]);
+    }
+    let strarr3 = strarr2.join("");
+    if (strarr===strarr3){
+        return true;
+    }else{
+        return false;
+    }
     /* Only make changes below this comment */
 }
 
