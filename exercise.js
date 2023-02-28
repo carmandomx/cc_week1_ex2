@@ -15,15 +15,16 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
-}
+  /* Only make changes below this comment */
+  let newStr = str.replace(/ /g, "").toLowerCase();
 
+  if (newStr !== [...newStr].reverse().join("")) {
+    return false;
+  }
+  return true;
 
-
-
+  /* Only make changes below this comment */
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
