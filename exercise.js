@@ -15,15 +15,15 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
-    /* Only make changes below this comment */
-    
-    
-    /* Only make changes below this comment */
-}
+  /* Only make changes below this comment */
+  let regEx = /[\W_]/g; //Regular expresion, any non-alphanumeric character and underscores
+  let newStr = str.replace(regEx, "");
 
-
-
-
+  let strRev = newStr.split("").reverse().join("");
+  if (strRev === newStr) return true;
+  return false;
+  /* Only make changes below this comment */
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.palindrome = palindrome;
