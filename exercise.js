@@ -16,8 +16,10 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
   /* Only make changes below this comment */
+  //Create new variable containing the str with no spaces and in lowercase
   let newStr = str.replace(/ /g, "").toLowerCase();
 
+  // Check if the newStr variable is equal to its reversed version
   if (newStr !== [...newStr].reverse().join("")) {
     return false;
   }
