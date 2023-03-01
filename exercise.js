@@ -15,8 +15,9 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
+    const strClean = str.replace(/[.\-=/_ ]/,"").toLowerCase();
     /* Only make changes below this comment */
-    
+    return strClean === strClean.split("").reverse().join("")
     
     /* Only make changes below this comment */
 }
