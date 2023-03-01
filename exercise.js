@@ -17,16 +17,16 @@
 const palindrome = (str) => {
     /* Only make changes below this comment */
 
-    /* Expresion regular para remover espacios en blanco */
+    /* Regular expression to remove whitespace */
     const regExp = /\s+/g;
 
-    /* Se le asigna a una variable el valor de 'str' pero convirtiendo todas las letras a minusculas y removiendo los espacios en blanco */
+    /* A variable is assigned the value of 'str' but converting all letters to lowercase and removing whitespace. */
     let lowRegExp = str.toLowerCase().replace(regExp, '');
 
-    /* Se divide la cadena letra por letra con método split, con el método reverse voteamos la cadena y con el método join volvemos a integrar la cadena */
+    /* The string is divided letter by letter with the split method, with the reverse method we reverse the string and with the join method we integrate the string again */
     let newStr = lowRegExp.split('').reverse().join('');
     
-    /* Comparar la cadena 'normal' vs la cadena en reversa */
+    /* Compare 'normal' string vs string in reverse */
     if(newStr === lowRegExp) {
         return true;
     }
