@@ -16,13 +16,20 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    
-    
+    let rep = /[^A-Za-z0-9]/g; //Search for all non-alphanumerical characters (like spaces, dots, comas)
+    let lowStr = str.toLowerCase().replace(rep,"") //All the characters in the string are now lowercase and the non-alphanumerical characters will be replaced with ""  
+    let revString = lowStr.split("").reverse().join("") //Reverse all the remain characters from the lowercased string
+    return revString === lowStr
     /* Only make changes below this comment */
 }
 
+var a = "anita lava la tina"
+var b = "race car"
+var c = "Carlos Reyes"
 
-
+console.log(palindrome(a))
+console.log(palindrome(b))
+console.log(palindrome(c))
 
 
 /** DO NOT CHANGE THE LINE BELOW **/
