@@ -16,6 +16,15 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
+    const palabra = str.replace(/[\W_]/g,"").toLowerCase();
+
+    const palabraR=palabra.split("").reverse().join("");
+
+    if(palabra==palabraR){
+        return true
+    } else{
+        return false
+    }
     
     
     /* Only make changes below this comment */
