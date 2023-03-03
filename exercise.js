@@ -16,13 +16,13 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const palindrome = (str) => {
     /* Only make changes below this comment */
-    let strarr = str.split(" ").join("");
-    let strarr2 = [];
-    for(i=strarr.length-1; i>=0;i--){
-        strarr2.push(strarr[i]);
+    let strarr = str.split(" ").join("");//here we split the input parameter and remove de spaces between
+    let strarr2 = [];//we create an empty array
+    for(i=strarr.length-1; i>=0;i--){//here we iterate inside the strarr beggining from the last element and ending with the first one
+        strarr2.push(strarr[i]);//each character is saved into the empty array
     }
-    let strarr3 = strarr2.join("");
-    if (strarr===strarr3){
+    let strarr3 = strarr2.join("");//we transform the elements of the strarr2 into a string and save them into a new variable
+    if (strarr===strarr3){ //we compare the first string without spaces with the result, if results are equal it returns true, otherwise it returns false
         return true;
     }else{
         return false;
